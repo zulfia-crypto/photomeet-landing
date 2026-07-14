@@ -1,0 +1,309 @@
+<section class="registration-section">
+  <div class="container">
+    <h2 class="section-title">Подать заявку на участие</h2>
+
+    <div class="registration-content">
+      <!-- Форма -->
+      <div class="form-wrapper">
+        <!-- Левая колонка -->
+        <div class="form-column form-column--left">
+          <div class="form-field">
+            <label class="form-label">ФИО*</label>
+            <input type="text" class="form-input" placeholder="Введите ваше полное имя" />
+          </div>
+          <div class="form-field">
+            <label class="form-label">Email*</label>
+            <input type="email" class="form-input" placeholder="Введите ваш email" />
+          </div>
+          <div class="form-field">
+            <label class="form-label">Номер телефона*</label>
+            <input type="tel" class="form-input" placeholder="+7 (000) 000-00-00" />
+          </div>
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="form-column form-column--right">
+          <div class="form-field">
+            <label class="form-label">Уровень подготовки*</label>
+            <textarea class="form-input form-textarea" placeholder="Начинающий / Любитель / Профессионал / Коммерческий фотограф"></textarea>
+          </div>
+          <button type="submit" class="submit-button">Отправить заявку</button>
+        </div>
+      </div>
+
+      <!-- Текст справа -->
+      <div class="registration-info">
+        <h3 class="info-title">ТРИ ДНЯ, КОТОРЫЕ ИЗМЕНЯТ ВСЁ</h3>
+        <p class="info-text">
+          Погружение в мир профессиональной фотографии, новые техники съемки и среда, в которой хочется творить. Ждем именно вас!
+        </p>
+      </div>
+    </div>
+
+    <!-- Чекбокс -->
+    <div class="checkbox-wrapper">
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" />
+        <span>Согласен(а) с политикой конфиденциальности и обработкой персональных данных</span>
+      </label>
+    </div>
+  </div>
+</section>
+
+<style>
+  .registration-section {
+    padding-top: 140px; /* Отступ от предыдущей секции */
+    padding-bottom: var(--spacing-xl);
+    background: var(--background);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-title {
+    text-align: right;
+    font-size: var(--h1-size);
+    font-weight: 600;
+    color: #969696;
+    line-height: 69.77px;
+    margin: 0 0 var(--spacing-xl) 0;
+    font-family: var(--font-main);
+  }
+
+  .registration-content {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+  }
+
+  
+  .form-wrapper {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background: rgba(30, 45, 58, 0.25);
+    border-radius: var(--radius-md);
+    outline: 3px solid #2D6FA5;
+    outline-offset: -3px;
+    overflow: hidden;
+    padding: 57px 36px 36px 29px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .form-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-column--left {
+    gap: var(--spacing-sm);
+  }
+
+  .form-column--right {
+    gap: 87px;
+    justify-content: space-between;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .form-label {
+    font-size: var(--body-size);
+    font-weight: 400;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+  }
+
+  .form-input {
+    width: 100%;
+    height: 40px;
+    padding: 10px 15px;
+    background: rgba(217, 217, 217, 0.20);
+    border: none;
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: var(--body-size);
+    font-weight: 400;
+    font-family: var(--font-main);
+    outline: none;
+    box-sizing: border-box;
+    transition: background 0.3s;
+  }
+
+  .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .form-input:focus {
+    background: rgba(217, 217, 217, 0.3);
+  }
+
+  .form-textarea {
+    height: 100px;
+    resize: none;
+    line-height: 1.5;
+  }
+
+  .submit-button {
+    width: 100%;
+    height: 40px;
+    padding: 10px 15px;
+    background: var(--primary);
+    border: none;
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: var(--body-size);
+    font-weight: 400;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .submit-button:hover {
+    background: #2d7bc4;
+  }
+
+  .submit-button:active {
+    transform: scale(0.98);
+  }
+
+  .submit-button:disabled {
+    background: rgba(61, 153, 229, 0.5);
+    cursor: not-allowed;
+  }
+
+  /* Текст справа */
+  .registration-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding-top: 0;
+    max-width: 364px;
+  }
+
+  .info-title {
+    text-align: center;
+    font-size: var(--body-size);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+    font-family: var(--font-main);
+  }
+
+  .info-text {
+    width: 278px;
+    height: 137px;
+    font-size: var(--body-size);
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.59);
+    margin: 0;
+    font-family: var(--font-main);
+  }
+
+  /* Чекбокс */
+  .checkbox-wrapper {
+    margin-top: var(--spacing-sm);
+    width: 448px;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .checkbox-input {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: var(--primary);
+  }
+
+  .checkbox-label span {
+    font-size: var(--small-size);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.50);
+    font-family: var(--font-main);
+    line-height: 1.5;
+  }
+
+  /* Мобильная версия */
+  @media (max-width: 768px) {
+    .registration-section {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      text-align: left;
+      margin-bottom: 30px;
+      line-height: 1.2;
+      padding-right: 0;
+    }
+
+    .registration-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      height: auto;
+      grid-template-columns: 1fr;
+      padding: var(--spacing-md);
+      gap: var(--spacing-sm);
+    }
+
+    .form-column--right {
+      gap: var(--spacing-sm);
+    }
+
+    .info-title {
+      font-size: var(--body-size);
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .info-text {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+
+    .registration-info {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    .checkbox-wrapper {
+      width: 100%;
+    }
+
+    .checkbox-label span {
+      font-size: 12px;
+    }
+
+    .container {
+      padding: 0 var(--spacing-md);
+    }
+  }
+</style>

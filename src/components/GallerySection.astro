@@ -1,0 +1,290 @@
+<section class="gallery-section">
+  <!-- Фоновый текст -->
+  <div class="gallery-bg-text">Галерея</div>
+
+  <div class="container">
+    <div class="gallery-header">
+      <div class="gallery-top">
+        <h2 class="gallery-title">Галерея с прошлых встреч</h2>
+        <div class="gallery-info">
+          <p class="gallery-description">
+            Яркие моменты с предыдущих мероприятий PhotoMeet.<br/>
+            Вдохновляйтесь и присоединяйтесь к нам в этом году!
+          </p>
+          <div class="gallery-arrows">
+            <button class="arrow-box" aria-label="Влево">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </button>
+            <button class="arrow-box" aria-label="Вправо">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-wrapper">
+      <div class="gallery-scroll">
+        <div class="gallery-item">
+          <img src="/foto/02-Best photos section/pexels-abhishek-saini-2783878.jpg" alt="Фото 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="/foto/02-Best photos section/pexels-fatih-guney-18794502.jpg" alt="Фото 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="/foto/02-Best photos section/pexels-jacub-gomez-1152041.jpg" alt="Фото 3" />
+        </div>
+        <div class="gallery-item gallery-item--tall">
+          <img src="/foto/02-Best photos section/pexels-jonathan-borba-3014856.jpg" alt="Фото 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="/foto/02-Best photos section/pexels-roberto-lee-cortes-12229002.jpg" alt="Фото 5" />
+        </div>
+      </div>
+
+      <div class="gallery-captions">
+        <div class="caption-button">@PhotoMeet_2025</div>
+        <div class="caption-text">Мастер-класс 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-section {
+    padding-top: 140px; /* Отступ от предыдущей секции */
+    padding-bottom: var(--spacing-xl);
+    background: var(--background);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* Фоновый текст */
+  .gallery-bg-text {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    font-size: 180px;
+    font-weight: 600;
+    color: rgba(149.6, 149.6, 149.6, 0.05);
+    line-height: 196.24px;
+    text-align: left;
+    white-space: nowrap;
+    pointer-events: none;
+    font-family: var(--font-main);
+    z-index: 0;
+    padding-left: var(--spacing-lg);
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+  }
+
+  .gallery-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .gallery-top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .gallery-title {
+    font-size: var(--h1-size);
+    font-weight: 600;
+    color: #969696;
+    line-height: 69.77px;
+    margin: 0;
+    font-family: var(--font-main);
+  }
+
+  .gallery-info {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .gallery-description {
+    font-size: var(--body-size);
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.59);
+    margin: 0;
+    font-family: var(--font-main);
+    max-width: 447px;
+  }
+
+  .gallery-arrows {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .arrow-box {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--h3-size);
+    color: var(--text-primary);
+    cursor: pointer;
+    background: transparent;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .arrow-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .arrow-box:active {
+    transform: scale(0.95);
+  }
+
+  .gallery-wrapper {
+    position: relative;
+    height: 603px;
+  }
+
+  .gallery-scroll {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+  }
+
+  .gallery-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .gallery-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+  }
+
+  .gallery-scroll::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: var(--radius-sm);
+  }
+
+  .gallery-item {
+    flex-shrink: 0;
+    width: 360px;
+    height: 420px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .gallery-item--tall {
+    height: 542px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-lg);
+  }
+
+  .gallery-captions {
+    position: absolute;
+    right: var(--spacing-lg);
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .caption-button {
+    padding: 12px 41px;
+    background: var(--primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+
+  .caption-button:hover {
+    background: #2d8ad6;
+  }
+
+  .caption-button,
+  .caption-text {
+    color: var(--text-primary);
+    font-size: var(--body-size);
+    font-weight: 400;
+    font-family: var(--font-main);
+  }
+
+  /* Мобильная версия */
+  @media (max-width: 768px) {
+    .gallery-section {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .gallery-bg-text {
+      font-size: 60px;
+      line-height: 65px;
+      top: 20px;
+      left: 0;
+      padding-left: var(--spacing-md);
+      width: 100%;
+      transform: none;
+    }
+
+    .gallery-title {
+      font-size: 32px;
+      line-height: 35px;
+    }
+
+    .gallery-info {
+      flex-direction: column;
+    }
+
+    .gallery-arrows {
+      display: none;
+    }
+
+    .gallery-wrapper {
+      height: auto;
+    }
+
+    .gallery-item {
+      width: 260px;
+      height: 300px;
+    }
+
+    .gallery-item--tall {
+      height: 400px;
+    }
+
+    .gallery-captions {
+      position: static;
+      justify-content: center;
+      margin-top: var(--spacing-md);
+    }
+
+    .container {
+      padding: 0 var(--spacing-md);
+    }
+  }
+</style>

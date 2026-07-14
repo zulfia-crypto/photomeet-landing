@@ -1,0 +1,162 @@
+<footer class="footer-section">
+  
+  <!-- Камера на заднем фоне -->
+  <div class="footer-camera-bg">
+    <img src="/foto/camera-icon.svg" alt="Camera" />
+  </div>
+
+  <div class="container">
+    <div class="footer-divider"></div>
+
+    <nav class="footer-nav">
+      <a href="#" class="footer-link">О мероприятии</a>
+      <a href="#" class="footer-link">Программа</a>
+      <a href="#" class="footer-link">Спикеры</a>
+      <a href="#" class="footer-link">Галерея</a>
+      <a href="#" class="footer-link">Контакты</a>
+    </nav>
+
+    <div class="footer-socials">
+      <a href="#" class="social-link">
+        <img src="/foto/04-Social Icons footer/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="#" class="social-link">
+        <img src="/foto/04-Social Icons footer/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="#" class="social-link">
+        <img src="/foto/04-Social Icons footer/behance.svg" alt="Behance" />
+      </a>
+      <a href="#" class="social-link">
+        <img src="/foto/04-Social Icons footer/linkedin.svg" alt="LinkedIn" />
+      </a>
+    </div>
+
+    <p class="footer-copy">© PhotoMeet 2026</p>
+  </div>
+</footer>
+
+<style>
+  .footer-section {
+    background: var(--background);
+    position: relative;
+    overflow: hidden; /* Обрезает камеру, если выходит за границы */
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+  }
+
+  /* Камера на заднем фоне */
+  .footer-camera-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 140px;
+    height: 140px;
+    opacity: 0.08;
+    filter: blur(3px);
+    z-index: 0;
+    pointer-events: none; /* Не перехватывает клики */
+  }
+
+  .footer-camera-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Белая камера */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Контент поверх камеры */
+  }
+
+  .footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+
+  .footer-link {
+    font-size: var(--body-size);
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-family: var(--font-main);
+    transition: color 0.3s;
+  }
+
+  .footer-link:hover {
+    color: var(--text-primary);
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+  }
+
+  .social-link:hover {
+    transform: scale(1.1);
+  }
+
+  .social-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+
+  .footer-copy {
+    font-size: var(--small-size);
+    color: rgba(255, 255, 255, 0.4);
+    font-family: var(--font-main);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer-section {
+      padding: var(--spacing-lg) 0 var(--spacing-lg);
+    }
+
+    .footer-nav {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .footer-socials {
+      gap: var(--spacing-sm);
+    }
+
+    .footer-camera-bg {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container {
+      padding: 0 var(--spacing-md);
+    }
+  }
+</style>

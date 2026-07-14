@@ -1,0 +1,243 @@
+<section class="when-where-section">
+  <div class="container">
+    <h2 class="section-title">КОГДА И ГДЕ</h2>
+    
+    <div class="date-info">
+      <!-- Иконка календаря -->
+      <svg class="date-icon" width="28" height="28" viewBox="0 0 682.667 682.667" fill="none">
+        <g transform="matrix(1.33333 0 0 -1.33333 0 682.667)">
+          <path d="M0 0h39.333m78.895 0h39.333M-118 0h39.333M0 118h39.333m78.895 0h39.333M-118 118h39.333m-137.666 98.667h472.227M-137.439-98H177c43.572 0 78.894 35.322 78.894 78.895v274.877c0 43.572-35.322 78.895-78.894 78.895h-314.439c-43.572 0-78.894-35.323-78.894-78.895V-19.105c0-43.573 35.322-78.895 78.894-78.895zm275.333 373.667V374m-236.227-98.333V374" 
+            transform="translate(236.333 118)" 
+            fill="none" 
+            stroke="white" 
+            stroke-width="40" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"/>
+        </g>
+      </svg>
+      <div class="date-text">
+        <span class="date-label">ДАТЫ ПРОВЕДЕНИЯ</span>
+        <span class="date-value">15-17 АВГУСТА 2026 ГОДА</span>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <!-- Время работы -->
+      <div class="info-block">
+        <div class="info-header">
+          <!-- Иконка часов -->
+          <svg class="info-icon" width="24" height="24" viewBox="0 0 512 512" fill="none">
+            <path d="m347.216 301.211-71.387-53.54V138.609c0-10.966-8.864-19.83-19.83-19.83-10.966 0-19.83 8.864-19.83 19.83v118.978c0 6.246 2.935 12.136 7.932 15.864l79.318 59.489a19.713 19.713 0 0 0 11.878 3.966c6.048 0 11.997-2.717 15.884-7.952 6.585-8.746 4.8-21.179-3.965-27.743z" fill="white"/>
+            <path d="M256 0C114.833 0 0 114.833 0 256s114.833 256 256 256 256-114.833 256-256S397.167 0 256 0zm0 472.341c-119.275 0-216.341-97.066-216.341-216.341S136.725 39.659 256 39.659c119.295 0 216.341 97.066 216.341 216.341S375.275 472.341 256 472.341z" fill="white"/>
+          </svg>
+          <h3>Время работы</h3>
+        </div>
+        <div class="info-content">
+          <p><strong>10:00</strong> — Регистрация и приветственный кофе</p>
+          <p><strong>11:00-18:00</strong> — Основная программа</p>
+          <p><strong>18:00-19:00</strong> — Нетворкинг и фуршет</p>
+        </div>
+      </div>
+
+      <!-- Место проведения -->
+      <div class="info-block">
+        <div class="info-header">
+          <!-- Иконка локации -->
+          <svg class="info-icon" width="24" height="24" viewBox="0 0 64 64" fill="none">
+            <path d="M32 0A24.032 24.032 0 0 0 8 24c0 17.23 22.36 38.81 23.31 39.72a.99.99 0 0 0 1.38 0C33.64 62.81 56 41.23 56 24A24.032 24.032 0 0 0 32 0zm0 35a11 11 0 1 1 11-11 11.007 11.007 0 0 1-11 11z" fill="white"/>
+          </svg>
+          <h3>Место проведения</h3>
+        </div>
+        <div class="info-content">
+          <p><strong>МГТУ им. Г.И. Носова</strong></p>
+          <p>г. Магнитогорск, пр. Ленина, 38</p>
+          <p><strong>Аудитория 301</strong> (актовый зал)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .when-where-section {
+   padding-top: 140px;
+    padding-bottom: var(--spacing-xl);
+    background: var(--background);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .when-where-section::before {
+    content: 'КОГДА И ГДЕ';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.03);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: var(--h1-size);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 var(--spacing-lg) 0;
+    font-family: var(--font-main);
+  }
+
+  .date-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .date-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .date-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .date-label {
+    font-size: var(--small-size);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-main);
+  }
+
+  .date-value {
+    font-size: var(--body-size);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-family: var(--font-main);
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .info-block {
+    padding: 0 20px;
+  }
+
+  .info-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .info-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .info-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    font-family: var(--font-main);
+  }
+
+  .info-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 12px 0;
+    font-family: var(--font-main);
+  }
+
+  .info-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .info-block:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    padding-right: 40px;
+  }
+
+  .info-block:last-child {
+    padding-left: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .when-where-section {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .when-where-section::before {
+      font-size: 60px;
+      top: 80px;
+    }
+
+    .date-info {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .date-label,
+    .date-value {
+      text-align: center;
+    }
+
+    .info-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .info-block {
+      text-align: center;
+    }
+
+    .info-block:first-child {
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-right: 0;
+      padding-bottom: 32px;
+    }
+
+    .info-block:last-child {
+      padding-left: 0;
+    }
+
+    .info-header {
+      justify-content: center;
+    }
+
+    .info-content p {
+      text-align: center;
+    }
+
+    .container {
+      padding: 0 var(--spacing-md);
+    }
+  }
+</style>

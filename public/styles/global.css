@@ -1,0 +1,98 @@
+/* Токены из Figma */
+:root {
+    /* Цвета */
+    --primary: #3D99E5;
+    --background: #191E22;
+    --text-primary: #FFFFFF;
+    --text-secondary: #999999;
+    
+    /* Типографика */
+    --font-main: 'Inter', sans-serif;
+    --h1-size: 64px;
+    --h2-size: 48px;
+    --h3-size: 24px;
+    --body-size: 20px;
+    --small-size: 14px;
+    
+    /* Отступы */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    
+    /* Радиусы */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+  }
+  
+  /* Базовые стили */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: var(--body-size);
+    line-height: 1.5;
+  }
+  
+  /* Контейнер для центрирования */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+  
+  /* Заголовки */
+  h1 {
+    font-size: var(--h1-size);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  h2 {
+    font-size: var(--h2-size);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  /* Кнопка */
+  .btn {
+    background-color: var(--primary);
+    color: var(--text-primary);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-size: var(--body-size);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #2d8ad6;
+  }
+  
+  /* Секции */
+  section {
+    padding: var(--spacing-xl) 0;
+  }
+/* Фикс для ссылок — всегда белые */
+.header__nav a,
+.header__nav a:visited,
+.header__nav a:hover,
+.header__nav a:active {
+  color: white !important;
+  text-decoration: none !important;
+}

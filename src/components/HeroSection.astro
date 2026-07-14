@@ -1,0 +1,305 @@
+<section class="hero-section">
+  <!-- Шапка ПОВЕРХ всего -->
+  <header class="header">
+    <div class="header__logo">
+      <img src="/foto/camera-icon.svg" alt="Camera" class="header__icon" />
+      <span>PhotoMeet 2026</span>
+    </div>
+    <button class="burger" aria-label="Меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="header__nav">
+      <a href="#about">О мероприятии</a>
+      <a href="#program">Программа</a>
+      <a href="#speakers">Спикеры</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <!-- Две колонки -->
+  <div class="hero-content">
+    <div class="hero-content__left">
+      <h1 class="hero__title">Приветствуем вас</h1>
+      <h2 class="hero__subtitle">PhotoMeet 2026</h2>
+      <p class="hero__description">
+        Крупнейшая встреча фотографов Магнитогорска.<br/>
+        3 дня мастер-классов, нетворкинга и вдохновения<br/>
+        от профессионалов индустрии с многолетним опытом.
+      </p>
+      <button class="hero__button">Зарегистрироваться</button>
+    </div>
+    
+    <div class="hero-content__right">
+      <div class="hero__gradient"></div>
+      <img src="/foto/man_Camera.png" alt="Фотограф" class="hero__image" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    min-height: 100vh;
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .header__icon {
+    filter: brightness(0) invert(1);
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: transparent;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .header__icon {
+    width: 39px;
+    height: 27px;
+  }
+
+  .header__logo span {
+    color: var(--text-primary);
+    font-size: var(--h3-size);
+    font-weight: 600;
+    font-family: var(--font-main);
+  }
+
+ .header__nav {
+  display: flex;
+  gap: 80px;
+  margin-left: 120px; /* Подберите нужное значение */
+}
+  .header__nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-family: var(--font-main);
+    transition: opacity 0.3s;
+  }
+
+  .header__nav a:hover {
+    opacity: 0.8;
+  }
+
+  .hero-content__left {
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-md) var(--spacing-xl);
+    padding-top: calc(var(--spacing-xl) * 3);
+  }
+
+  .hero__title {
+    font-size: var(--h1-size);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-md) 0;
+    font-family: var(--font-main);
+    line-height: 1.2;
+  }
+
+  .hero__subtitle {
+    font-size: var(--h2-size);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-lg) 0;
+    font-family: var(--font-main);
+    line-height: 1.2;
+  }
+
+  .hero__description {
+    font-size: var(--body-size);
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-main);
+  }
+
+  .hero__button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--primary);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: var(--body-size);
+    font-weight: 600;
+    font-family: var(--font-main);
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .hero__button:hover {
+    background: #2d8ad6;
+  }
+
+  .hero__button:active {
+    transform: scale(0.98);
+  }
+
+  .hero__button:disabled {
+    background: rgba(61, 153, 229, 0.5);
+    cursor: not-allowed;
+  }
+
+  .hero-content__right {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 var(--spacing-xl) 0;
+  }
+
+  .hero__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(179deg, #3E9EED 0%, rgba(62, 158, 237, 0.10) 91%);
+    border-bottom-left-radius: 200px;
+    z-index: 0;
+  }
+
+  .hero__image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 603px;
+    height: auto;
+  }
+
+  /* Бургер-иконка (скрыта на десктопе) */
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+  }
+
+  .burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: 2px;
+  }
+
+  /* МОБИЛЬНАЯ ВЕРСИЯ */
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+    }
+
+    
+    .hero-content__right {
+      order: -1;
+      padding: 0;
+      min-height: 60vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Градиент на всю высоту колонки */
+    .hero__gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-bottom-left-radius: var(--radius-lg);
+      border-bottom-right-radius: 0;
+    }
+
+    
+    .hero__image {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-top: 0;
+    }
+
+    /* Левая колонка (текст) */
+    .hero-content__left {
+      padding: var(--spacing-lg) var(--spacing-md);
+      padding-top: var(--spacing-md);
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero__title {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .hero__subtitle {
+      font-size: var(--spacing-lg);
+      text-align: center;
+    }
+
+    .hero__description {
+      text-align: center;
+      font-size: var(--small-size);
+    }
+
+    .hero__button {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Шапка мобильная */
+    .header {
+      padding: var(--spacing-md) var(--spacing-md);
+    }
+
+    .header__nav {
+      display: none;
+    }
+
+    .burger {
+      display: flex;
+    }
+
+    .header__logo span {
+      font-size: var(--small-size);
+    }
+
+    .header__icon {
+      width: 28px;
+      height: 20px;
+    }
+  }
+</style>
