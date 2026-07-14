@@ -1,42 +1,63 @@
-# Astro Starter Kit: Minimal
+# PhotoMeet 2026 - Landing Page
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Лендинг конференции для фотографов в Магнитогорске. 3 дня мастер-классов, нетворкинга и вдохновения от профессионалов индустрии.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📋 Дизайн-система
 
-## 🚀 Project Structure
+**Figma макет:** [Дизайн-система и макеты](https://www.figma.com/design/DYO1lsvMke29b3Thu4lK7L/практика?node-id=0-1&t=zNt3DcbKY3pjkdT5-1)
 
-Inside of your Astro project, you'll see the following folders and files:
+### Токены дизайн-системы:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+**Цвета:**
+- Primary: #3D99E5 (синий)
+- Background: #191E22 (тёмный)
+- Text Primary: #FFFFFF (белый)
+- Text Secondary: #999999 (серый)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+**Типографика:**
+- Шрифт: Inter
+- H1: 64px, 700 weight
+- H2: 48px, 700 weight
+- H3: 24px, 600 weight
+- Body: 20px, 400-500 weight
+- Small: 14px
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+**Отступы:**
+- XS: 8px
+- SM: 16px
+- MD: 24px
+- LG: 32px
+- XL: 48px
 
-Any static assets, like images, can be placed in the `public/` directory.
+**Радиусы:**
+- SM: 8px
+- MD: 12px
+- LG: 16px
 
-## 🧞 Commands
+### Компоненты (7 штук):
 
-All commands are run from the root of the project, from a terminal:
+1. **HeroSection** - шапка с приветствием и фотографией
+2. **ProgramSection** - программа мероприятия (3 карточки)
+3. **WhenWhereSection** - когда и где (даты и место)
+4. **SpeakersSection** - спикеры мероприятия
+5. **GallerySection** - галерея с прошлых встреч
+6. **RegistrationSection** - форма регистрации
+7. **FooterSection** - подвал с навигацией
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🚀 Установка и запуск
+
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск локального сервера разработки
+npm run dev
+
+# Сборка продакшн версии
+npm run build
+
+# Предпросмотр сборки перед деплоем
+npm run preview
 
 ## 👀 Want to learn more?
 
