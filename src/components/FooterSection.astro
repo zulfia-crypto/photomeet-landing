@@ -39,7 +39,7 @@
   .footer-section {
     background: var(--background);
     position: relative;
-    overflow: hidden; /* Обрезает камеру, если выходит за границы */
+    overflow: hidden; 
     padding: var(--spacing-xl) 0 var(--spacing-lg);
   }
 
@@ -54,14 +54,14 @@
     opacity: 0.08;
     filter: blur(3px);
     z-index: 0;
-    pointer-events: none; /* Не перехватывает клики */
+    pointer-events: none; 
   }
 
   .footer-camera-bg img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Белая камера */
+    filter: brightness(0) invert(1); 
   }
 
   .container {
@@ -70,7 +70,7 @@
     padding: 0 var(--spacing-lg);
     text-align: center;
     position: relative;
-    z-index: 1; /* Контент поверх камеры */
+    z-index: 1; 
   }
 
   .footer-divider {
